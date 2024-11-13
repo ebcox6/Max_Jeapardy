@@ -37,14 +37,41 @@
             border: none;
             cursor: pointer;
             font-size: 16px;
+            perspective: 1000px;
         }
-        .question-button:hover {
+        .flip-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        .flip-card.flipped {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-front {
+            background-color: #ffa500;
+            color: white;
+        }
+        .card-back {
             background-color: #ff4500;
+            color: white;
+            transform: rotateY(180deg);
         }
     </style>
     <script>
-        function displayQuestion(question) {
-            alert(question);
+        function flipCard(button) {
+            const card = button.querySelector('.flip-card');
+            card.classList.toggle('flipped');
         }
     </script>
 </head>
@@ -57,35 +84,161 @@
         <div class="category">Ecology</div>
         <div class="category">Photosynthesis & Cellular Respiration</div>
 
-        <button class="question-button" onclick="displayQuestion('What is the first step in the scientific method?')">$100</button>
-        <button class="question-button" onclick="displayQuestion('What are the four main types of macromolecules?')">$100</button>
-        <button class="question-button" onclick="displayQuestion('What is the basic unit of life?')">$100</button>
-        <button class="question-button" onclick="displayQuestion('What is an ecosystem?')">$100</button>
-        <button class="question-button" onclick="displayQuestion('What is the main purpose of photosynthesis?')">$100</button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$100</div>
+                <div class="card-back">What is the first step in the scientific method?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$100</div>
+                <div class="card-back">What are the four main types of macromolecules?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$100</div>
+                <div class="card-back">What is the basic unit of life?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$100</div>
+                <div class="card-back">What is an ecosystem?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$100</div>
+                <div class="card-back">What is the main purpose of photosynthesis?</div>
+            </div>
+        </button>
 
-        <button class="question-button" onclick="displayQuestion('What is a hypothesis?')">$200</button>
-        <button class="question-button" onclick="displayQuestion('Which macromolecule stores genetic information?')">$200</button>
-        <button class="question-button" onclick="displayQuestion('Name one function of the cell membrane.')">$200</button>
-        <button class="question-button" onclick="displayQuestion('What is a producer in an ecosystem?')">$200</button>
-        <button class="question-button" onclick="displayQuestion('In what organelle does cellular respiration occur?')">$200</button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$200</div>
+                <div class="card-back">What is a hypothesis?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$200</div>
+                <div class="card-back">Which macromolecule stores genetic information?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$200</div>
+                <div class="card-back">Name one function of the cell membrane.</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$200</div>
+                <div class="card-back">What is a producer in an ecosystem?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$200</div>
+                <div class="card-back">In what organelle does cellular respiration occur?</div>
+            </div>
+        </button>
 
-        <button class="question-button" onclick="displayQuestion('What is an independent variable?')">$300</button>
-        <button class="question-button" onclick="displayQuestion('What elements make up carbohydrates?')">$300</button>
-        <button class="question-button" onclick="displayQuestion('What is the function of mitochondria?')">$300</button>
-        <button class="question-button" onclick="displayQuestion('What is biodiversity?')">$300</button>
-        <button class="question-button" onclick="displayQuestion('What are the two stages of photosynthesis?')">$300</button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$300</div>
+                <div class="card-back">What is an independent variable?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$300</div>
+                <div class="card-back">What elements make up carbohydrates?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$300</div>
+                <div class="card-back">What is the function of mitochondria?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$300</div>
+                <div class="card-back">What is biodiversity?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$300</div>
+                <div class="card-back">What are the two stages of photosynthesis?</div>
+            </div>
+        </button>
 
-        <button class="question-button" onclick="displayQuestion('Define dependent variable.')">$400</button>
-        <button class="question-button" onclick="displayQuestion('What is the role of proteins in the body?')">$400</button>
-        <button class="question-button" onclick="displayQuestion('What is a lysosome?')">$400</button>
-        <button class="question-button" onclick="displayQuestion('What is the difference between a food web and a food chain?')">$400</button>
-        <button class="question-button" onclick="displayQuestion('What is ATP and why is it important?')">$400</button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$400</div>
+                <div class="card-back">Define dependent variable.</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$400</div>
+                <div class="card-back">What is the role of proteins in the body?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$400</div>
+                <div class="card-back">What is a lysosome?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$400</div>
+                <div class="card-back">What is the difference between a food web and a food chain?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$400</div>
+                <div class="card-back">What is ATP and why is it important?</div>
+            </div>
+        </button>
 
-        <button class="question-button" onclick="displayQuestion('What are constants in an experiment?')">$500</button>
-        <button class="question-button" onclick="displayQuestion('What is the primary structure of a protein?')">$500</button>
-        <button class="question-button" onclick="displayQuestion('What is the difference between prokaryotic and eukaryotic cells?')">$500</button>
-        <button class="question-button" onclick="displayQuestion('Define symbiosis and give an example.')">$500</button>
-        <button class="question-button" onclick="displayQuestion('How are photosynthesis and cellular respiration interconnected?')">$500</button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$500</div>
+                <div class="card-back">What are constants in an experiment?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$500</div>
+                <div class="card-back">What is the primary structure of a protein?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$500</div>
+                <div class="card-back">What is the difference between prokaryotic and eukaryotic cells?</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$500</div>
+                <div class="card-back">Define symbiosis and give an example.</div>
+            </div>
+        </button>
+        <button class="question-button" onclick="flipCard(this)">
+            <div class="flip-card">
+                <div class="card-front">$500</div>
+                <div class="card-back">How are photosynthesis and cellular respiration interconnected?</div>
+            </div>
+        </button>
     </div>
 </body>
 </html>
+
