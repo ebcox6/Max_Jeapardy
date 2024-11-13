@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Jeopardy Review Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .jeopardy-board {
+            display: grid;
+            grid-template-columns: repeat(5, 150px);
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .category {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .question-button {
+            background-color: #ffa500;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .question-button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+    <script>
+        function displayQuestion(question) {
+            alert(question);
+        }
+    </script>
+</head>
+<body>
+    <h1>Biology Jeopardy Review Game</h1>
+    <div class="jeopardy-board">
+        <div class="category">Scientific Inquiry</div>
+        <div class="category">Macromolecules</div>
+        <div class="category">Cells</div>
+        <div class="category">Ecology</div>
+        <div class="category">Photosynthesis & Cellular Respiration</div>
+
+        <button class="question-button" onclick="displayQuestion('What is the first step in the scientific method?')">$100</button>
+        <button class="question-button" onclick="displayQuestion('What are the four main types of macromolecules?')">$100</button>
+        <button class="question-button" onclick="displayQuestion('What is the basic unit of life?')">$100</button>
+        <button class="question-button" onclick="displayQuestion('What is an ecosystem?')">$100</button>
+        <button class="question-button" onclick="displayQuestion('What is the main purpose of photosynthesis?')">$100</button>
+
+        <button class="question-button" onclick="displayQuestion('What is a hypothesis?')">$200</button>
+        <button class="question-button" onclick="displayQuestion('Which macromolecule stores genetic information?')">$200</button>
+        <button class="question-button" onclick="displayQuestion('Name one function of the cell membrane.')">$200</button>
+        <button class="question-button" onclick="displayQuestion('What is a producer in an ecosystem?')">$200</button>
+        <button class="question-button" onclick="displayQuestion('In what organelle does cellular respiration occur?')">$200</button>
+
+        <button class="question-button" onclick="displayQuestion('What is an independent variable?')">$300</button>
+        <button class="question-button" onclick="displayQuestion('What elements make up carbohydrates?')">$300</button>
+        <button class="question-button" onclick="displayQuestion('What is the function of mitochondria?')">$300</button>
+        <button class="question-button" onclick="displayQuestion('What is biodiversity?')">$300</button>
+        <button class="question-button" onclick="displayQuestion('What are the two stages of photosynthesis?')">$300</button>
+
+        <button class="question-button" onclick="displayQuestion('Define dependent variable.')">$400</button>
+        <button class="question-button" onclick="displayQuestion('What is the role of proteins in the body?')">$400</button>
+        <button class="question-button" onclick="displayQuestion('What is a lysosome?')">$400</button>
+        <button class="question-button" onclick="displayQuestion('What is the difference between a food web and a food chain?')">$400</button>
+        <button class="question-button" onclick="displayQuestion('What is ATP and why is it important?')">$400</button>
+
+        <button class="question-button" onclick="displayQuestion('What are constants in an experiment?')">$500</button>
+        <button class="question-button" onclick="displayQuestion('What is the primary structure of a protein?')">$500</button>
+        <button class="question-button" onclick="displayQuestion('What is the difference between prokaryotic and eukaryotic cells?')">$500</button>
+        <button class="question-button" onclick="displayQuestion('Define symbiosis and give an example.')">$500</button>
+        <button class="question-button" onclick="displayQuestion('How are photosynthesis and cellular respiration interconnected?')">$500</button>
+    </div>
+</body>
+</html>
